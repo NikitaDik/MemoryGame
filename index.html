@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="controls">
+        <label for="width">Ширина:</label>
+        <input type="number" id="width" min="4" max="11" value="4">
+
+        <label for="height">Высота:</label>
+        <input type="number" id="height" max="3" max="6" value="3">
+
+        <div>Попыток - <span class="moves">0</span></div>
+
+        <button id="start-button" class="button-success">Старт</button>
+    </div>
+    <div class="board">
+        <div class="card">👽</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

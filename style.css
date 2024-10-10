@@ -1,0 +1,94 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+:root {
+    --border-radius-value: 10px;
+    --box-shadow-value: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    --light-gray: #c0c0c0;
+    --green: #34df3a;
+}
+
+.card {
+    background: #FEA176;
+    height: 100px;
+    width: 100px;
+    border-radius: var(--border-radius-value);
+    cursor: pointer;
+    box-shadow: var(--box-shadow-value);
+    transition: all 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0;
+    user-select: none;
+
+    :is(&.flipped, &:empty) {
+        font-size: 36px;
+        background: white;
+        transform: rotateY(180deg);
+    }
+
+    &.matched {
+        background: var(--green);
+    }
+}
+
+.controls {
+    border-radius: var(--border-radius-value);
+    box-shadow: var(--box-shadow-value);
+    width: 80vw;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+
+    .button-success {
+        margin-left: auto;
+    }
+}
+
+label {
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+input {
+    width: 100px;
+    padding: 6px 8px;
+    border-radius: var(--border-radius-value);
+    border: 2px solid var(--light-gray);
+    margin-right: 40px;
+}
+
+.button-success {
+    background: var(--green);
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+    color: white;
+    font-style: 16px;
+    transition: all 0.2s;
+    border: none;
+    border-radius: var(--border-radius-value);
+
+    &:hover {
+        background: #26b12d;
+    }
+}
+
+.board {
+    display: grid;
+    gap: 10px;
+}
